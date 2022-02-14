@@ -28,13 +28,13 @@ const {} = List;
 
 const { Paragraph } = Typography;
 
-const createColumns = async (config) => {
-  return Object.keys(config).map((i, key) => {
-    const column = { key, dataIndex: i, title: columns[i] };
-    console.log(column);
-    return column;
-  });
-};
+// const createColumns = async (config) => {
+//   return Object.keys(config).map((i, key) => {
+//     const column = { key, dataIndex: i, title: columns[i] };
+//     console.log(column);
+//     return column;
+//   });
+// };
 
 import {
   writeStorage,
@@ -43,6 +43,7 @@ import {
 } from '@rehooks/local-storage';
 
 // const apiData = useSWR();
+const EditableTable = require('./ET');
 class App extends Component {
   constructor() {
     super();
@@ -95,13 +96,18 @@ class App extends Component {
     return (
       <Layout>
         <Header></Header>
+        <EditableTable />
         <Form>
           <PageHeader title={<Input />} extra={<Button>+</Button>} />
         </Form>
         <Content>
+          <Table columns={[{ key: 1 }]} />
           <Table
             columns={[
-              { key: 1, title: 1 },
+              {
+                key: 1,
+                title: 1,
+              },
               { key: 2, title: 2 },
               { key: 3, title: 3 },
               { key: 4, title: 4 },
