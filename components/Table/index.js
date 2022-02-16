@@ -8,29 +8,45 @@ import {
   Typography,
   AutoComplete,
 } from 'antd';
-const originData = [
-  {
-    key: '000-000000',
-    type: 'SB',
-    manufacturer: 'HP',
-    model: 'Pro 6000',
-    serial: '1234567890',
-    inventory: '22-098765432',
-    year: 2012,
-    place: 230,
-  },
-];
-let cols = {
-  id: 'ID',
-  key: 'УНО',
-  type: 'Тип',
-  manufacturer: 'Производитель',
-  model: 'Модель',
-  serial: 'SN',
-  inventory: 'Инв. номер',
-  year: 'Год',
-  place: 'Место',
-};
+
+
+// const originData = [
+//   {
+//     key: '000-000000',
+//     type: 'SB',
+//     manufacturer: 'HP',
+//     model: 'Pro 6000',
+//     serial: '1234567890',
+//     inventory: '22-098765432',
+//     year: 2012,
+//     place: 230,
+//   },
+// ];
+// let cols = {
+//   id: 'ID',
+//   key: 'УНО',
+//   type: 'Тип',
+//   manufacturer: 'Производитель',
+//   model: 'Модель',
+//   serial: 'SN',
+//   inventory: 'Инв. номер',
+//   year: 'Год',
+//   place: 'Место',
+// };
+let type  = () {
+
+}
+// device: { manufacturer, model, year, place }, keys: { uno, serial, inventory }
+let root = {
+}
+
+let range = { from: 123, to: 456 }
+import models from './models'
+
+let model = ["type": { "type": "string" } ]
+
+
+
 let columns2 = [];
 for (let i = 0; i < cols.length; i++) {
   columns.push({
