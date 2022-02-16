@@ -36,11 +36,16 @@ const { Paragraph } = Typography;
 //   });
 // };
 
+// LocalStorage
 import {
   writeStorage,
   deleteFromStorage,
   useLocalStorage,
 } from '@rehooks/local-storage';
+
+const Storage = {
+  
+} 
 
 // const apiData = useSWR();
 const EditableTable = require('./ET');
@@ -94,42 +99,7 @@ class App extends Component {
     // });
 
     return (
-      <Layout>
-        <Header></Header>
-        <EditableTable />
-        <Form>
-          <PageHeader title={<Input />} extra={<Button>+</Button>} />
-        </Form>
-        <Content>
-          <Table columns={[{ key: 1 }]} />
-          <Table
-            columns={[
-              {
-                key: 1,
-                title: 1,
-              },
-              { key: 2, title: 2 },
-              { key: 3, title: 3 },
-              { key: 4, title: 4 },
-              { key: 5, title: 5 },
-              { key: 6, title: 6 },
-              {
-                key: 7,
-                title: 7,
-                type: '',
-                onRow: (data) => {
-                  console.log(data);
-                  return '1';
-                },
-              },
-            ]}
-          ></Table>
-        </Content>
-
-        <Footer>
-          <h3>Config</h3>
-        </Footer>
-      </Layout>
+     123
     );
   }
 }
